@@ -13,6 +13,20 @@ This utility changes that.
 
 ## Installation
 
+### Chocolatey
+
+If you want to install pvm without configuring any settings and setting PATH variables, then you can install pvm via (chocolatey)[https://community.chocolatey.org/packages/pvm].
+
+Ensure that [Chocolatey](https://chocolatey.org/) is installed on your system. 
+
+You can easily install PVM using Chocolatey. Run the following command in a command prompt or PowerShell with administrative rights:
+
+```shell
+choco install pvm
+```
+
+### Manual
+
 Download the latest pvm version from the releases page (1.0-alpha-1, it's currently a pre-release).
 
 Create the folder `%UserProfile%\.pvm\bin` (e.g. `C:\Users\Harry\.pvm\bin`) and drop the pvm exe in there. Add the folder to your PATH.
