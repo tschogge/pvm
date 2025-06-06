@@ -15,7 +15,7 @@ This utility changes that.
 
 ### Chocolatey
 
-If you want to install pvm without configuring any settings and setting PATH variables, then you can install pvm via [chocolatey](https://community.chocolatey.org/packages/php-pvm).
+If you want to install pvm without configuring any settings and setting PATH variables, then you can install pvm via [Chocolatey](https://community.chocolatey.org/packages/php-pvm).
 
 Ensure that [Chocolatey](https://chocolatey.org/) is installed on your system. 
 
