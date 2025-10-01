@@ -1,9 +1,6 @@
 name: Publish chocolatey package
 
-on: 
-    push:
-    release:
-        types: [published]
+on: [push]
 
 jobs: 
     publish:
