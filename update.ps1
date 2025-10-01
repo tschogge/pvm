@@ -37,4 +37,4 @@ function global:au_AfterUpdate ($Package) {
     choco push $Package.NuspecPath --api-key=$Env:CHOCO_API_KEY
 }
 
-update -ChecksumFor none -NuspecPath .\php-pvm.nuspec -NoReadme
+update -ChecksumFor none -NoReadme
