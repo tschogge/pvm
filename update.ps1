@@ -27,7 +27,7 @@ function global:au_SearchReplace {
             "(^\s*checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
         }
 
-        "php-pvm.nuspec"                = @{
+        ".\php-pvm.nuspec"                = @{
             "(\<version\>).*?(\</version\>)" = "`${1}$($Latest.Version)`$2"
         }
 
