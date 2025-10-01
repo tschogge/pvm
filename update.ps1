@@ -1,9 +1,10 @@
 Import-Module Chocolatey-AU
 
-function global:au_BeforeUpdate {
-    Write-Host "Current directory: $(Get-Location)"
-    Write-Host "Files in directory: $(Get-ChildItem)"
+Write-Host "Current directory: $(Get-Location)"
+Write-Host "Files in directory: $(Get-ChildItem)"
+Write-Host "Nuspec file exists: $(Test-Path .\php-pvm.nuspec)"
 
+function global:au_BeforeUpdate {
     $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
 }
 
