@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>php-pvm</id>
+    <version>1.2.0</version>
+    <packageSourceUrl>https://github.com/tschogge/php-pvm</packageSourceUrl>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>pvm</title>
+    <authors>hjbdev,Lotti,ENG3PLabs,oldreposcrapyard,goodjun,OliverWich,EbouBaker</authors>
+    <owners>Tschogge</owners>
+    <projectUrl>https://github.com/hjbdev/pvm</projectUrl>
+    <docsUrl>https://github.com/hjbdev/pvm</docsUrl>
+    <projectSourceUrl>https://github.com/hjbdev/pvm</projectSourceUrl>
+    <licenseUrl>https://github.com/hjbdev/pvm/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <mailingListUrl>https://github.com/hjbdev/pvm/discussions</mailingListUrl>
+    <bugTrackerUrl>https://github.com/hjbdev/pvm/discussions</bugTrackerUrl>
+    <tags>pvm php php-version php-version-manager manager phpversion phpversionmanager</tags>
+    <summary>A PHP version manager</summary>
+    <description>A PHP version manager to simply install different PHP versions and easily switch between them. Similar to nvm. Use pvm in the terminal after installation to get started. Repo: https://github.com/hjbdev/pvm</description>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
