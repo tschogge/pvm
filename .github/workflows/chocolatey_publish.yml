@@ -1,0 +1,22 @@
+name: Publish chocolatey package
+
+on: 
+    release:
+        types: [published]
+
+jobs: 
+    publish:
+        runs-on: windows-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Install Chocolatey-AU
+              shell: pwsh
+              run: Install-Module Chocolatey-AU -Force -Scope CurrentUser
+
+            - name: Run update.ps1
+              shell: pwsh
+              env:
+                CHOCO_API_KEY: ${{ secrets.CHOCO_API_KEY }}
+              run: .\.github\choco\update.ps1
