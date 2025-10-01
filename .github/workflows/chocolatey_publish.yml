@@ -13,18 +13,9 @@ jobs:
               shell: pwsh
               run: Install-Module Chocolatey-AU -Force -Scope CurrentUser
 
-            - name: Prepare chocolatey package
-              shell: pwsh
-              run: |
-                    # Erstelle temp directory für chocolatey package
-                    New-Item -ItemType Directory -Path "chocolatey_package" -Force
-                    Copy-Item "php-pvm.nuspec" "chocolatey_package/"
-                    Copy-Item "update.ps1" "chocolatey_package/"
-                    Copy-Item -Recurse "tools" "chocolatey_package/"
-
             - name: Run update.ps1
               shell: pwsh
               env:
                 CHOCO_API_KEY: ${{ secrets.CHOCO_API_KEY }}
-              working-directory: ./chocolatey_package
+              working-directory: ./php-pvm
               run: .\update.ps1
