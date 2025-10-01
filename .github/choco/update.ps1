@@ -1,6 +1,9 @@
 Import-Module Chocolatey-AU
 
 function global:au_BeforeUpdate {
+    Write-Host "Current directory: $(Get-Location)"
+    Write-Host "Files in directory: $(Get-ChildItem)"
+
     $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
 }
 
